@@ -65,4 +65,37 @@ export class Home extends Restaurant {
 			wrapper.appendChild(ratingWrapper);
 		})
 	}
+
+	addScheduleList() {
+		const wrapper = this.wrapper;
+		
+		const scheduleWrapper = document.createElement("div");
+		scheduleWrapper.className = 'content-wrapper';
+		wrapper.appendChild(scheduleWrapper);
+
+		const scheduleListHeader = document.createElement("h1");
+		scheduleListHeader.textContent = "Schedule";
+		scheduleWrapper.appendChild(scheduleListHeader);
+
+		const schedules = [
+			{
+				day: "Monday-Friday",
+				time: "9am-6pm",
+			},
+			{
+				day: "Saturday",
+				time: "9am-9pm",
+			},
+		];
+
+		schedules.forEach(schedule => {
+			const dayElement = document.createElement("div");
+			dayElement.textContent = schedule.day;
+			scheduleWrapper.appendChild(dayElement);
+
+			const timeElement = document.createElement("div");
+			timeElement.textContent = schedule.time;
+			scheduleWrapper.appendChild(timeElement);
+		});
+	}
 }
