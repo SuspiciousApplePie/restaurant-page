@@ -24,4 +24,36 @@ export class About extends Restaurant {
 		this.aboutSection.appendChild(aboutElement);
 
 	}
+
+	displayMember() {
+		const members = [
+			{
+				name: "Blady",
+				role: "Head Chef",
+			},
+			{
+				name: "Lancet",
+				role: "Assistant Chef",
+			},
+			{
+				name: "Mes",
+				role: "Waiter",
+			}
+		];
+
+		members.forEach(member => {
+			const memberWrapper = document.createElement("div");
+			
+			const name = document.createElement("p");
+			name.textContent = member.name;
+
+			const role = document.createElement("p");
+			role.textContent = member.role;
+
+			memberWrapper.appendChild(name);
+			memberWrapper.appendChild(role);
+
+			this.memberSection.appendChild(memberWrapper);
+		});
+	}
 }

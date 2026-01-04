@@ -19,7 +19,7 @@ export class Menu extends Restaurant {
 			section.appendChild(header);
 
 			this.container.appendChild(section);
-		})
+		});
 	}
 
 	addFood() {
