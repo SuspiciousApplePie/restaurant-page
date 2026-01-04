@@ -5,6 +5,7 @@ export class About extends Restaurant {
 		super();
 		this.aboutSection = document.createElement("div");
 		this.memberSection = document.createElement("div");
+		this.contactSection = document.createElement("div");
 	}
 
 	test() {
@@ -14,6 +15,7 @@ export class About extends Restaurant {
 	displaySection() {
 		this.container.appendChild(this.aboutSection);
 		this.container.appendChild(this.memberSection);
+		this.container.appendChild(this.contactSection);
 	}
 
 	displayAboutUs() {
@@ -55,5 +57,20 @@ export class About extends Restaurant {
 
 			this.memberSection.appendChild(memberWrapper);
 		});
+	}
+
+	displayContact() {
+		const contact = {
+			email: "thebladies@luminae.il",
+			number: "LUMEN87209114455",
+		}
+
+		const email = document.createElement("div");
+		email.textContent = contact.email;
+		this.contactSection.appendChild(email);
+
+		const contactNumber = document.createElement("div");
+		contactNumber.textContent = contact.number;
+		this.contactSection.appendChild(contactNumber);
 	}
 }

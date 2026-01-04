@@ -8,3 +8,4 @@ about.test();
 about.displaySection();
 about.displayAboutUs();
 about.displayMember();
+about.displayContact();
