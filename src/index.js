@@ -1,8 +1,8 @@
 import { Restaurant } from "./restaurant.js";
 import { Home } from "./home.js";
+import { Menu } from "./menu.js";
 
-const home = new Home();
-home.addWrapper();
-home.addTitle();
-home.addReview();
-home.addScheduleList();
+const menu = new Menu();
+
+menu.displaySection();
+menu.addFood();
