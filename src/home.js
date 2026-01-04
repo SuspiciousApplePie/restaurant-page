@@ -98,4 +98,18 @@ export class Home extends Restaurant {
 			scheduleWrapper.appendChild(timeElement);
 		});
 	}
+
+	displayAddress() {
+		const wrapper = this.wrapper;
+		const addressElement = document.createElement("div");
+		wrapper.appendChild(addressElement);
+
+		const addressHeader = document.createElement("h1");
+		addressHeader.textContent = "Address";
+		addressElement.appendChild(addressHeader);
+
+		const addressText = document.createElement("p");
+		addressText.textContent = "48, Sunstone Ave, Illumia, Luminae";
+		addressElement.appendChild(addressText);
+	}
 }
