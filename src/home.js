@@ -3,31 +3,18 @@ import { Restaurant } from "./restaurant.js";
 export class Home extends Restaurant {
 	constructor() {
 		super();
-	}
-
-	addWrapper() {
-		const wrapper = document.createElement("div");
-		wrapper.id = "home-wrapper";
-		this.container.appendChild(wrapper);
-	}
-
-	get wrapper() {
-		const wrapper = document.querySelector("#home-wrapper");
-		if (wrapper) {
-			return wrapper;
-		}
+		this.titleSection = document.createElement("div");
+		this.reviewSection = document.createElement("div");
+		this.scheduleSection = document.createElement("div");
+		this.addressSection = document.createElement("div");
 	}
 
 	addTitle() {
-		const wrapper = this.wrapper;
-		const titleWrapper = document.createElement("div");
-		titleWrapper.className = "title-wrapper"
-		wrapper.appendChild(titleWrapper);
-
 		const title = document.createElement('h1');
 		title.className = "title";
 		title.textContent = "Bladie's Pizzeria";
-		titleWrapper.appendChild(title);
+		this.titleSection.appendChild(title);
+		this.container.appendChild(this.titleSection);
 	}
 
 	addReview() {
@@ -44,38 +31,39 @@ export class Home extends Restaurant {
 			}
 		];
 
-		const wrapper = this.wrapper;
-
 		reviews.forEach(index => {
-			const ratingWrapper = document.createElement("div");
-			ratingWrapper.className = "content-wrapper"
+			this.container.appendChild(this.reviewSection);
 
 			const nameElement = document.createElement("h1");
 			nameElement.textContent = index.name;
-			ratingWrapper.appendChild(nameElement);
 
 			const reviewElement = document.createElement("p");
 			reviewElement.textContent = index.review;
-			ratingWrapper.appendChild(reviewElement);
 
 			const ratingElement = document.createElement("p");
 			ratingElement.textContent = `${index.rating}/10`;
-			ratingWrapper.appendChild(ratingElement);
 
-			wrapper.appendChild(ratingWrapper);
-		})
+			this.reviewSection.appendChild(nameElement);
+			this.reviewSection.appendChild(reviewElement);
+			this.reviewSection.appendChild(ratingElement);
+
+		});
 	}
 
 	addScheduleList() {
-		const wrapper = this.wrapper;
+
+		this.container.appendChild(this.scheduleSection);
 		
-		const scheduleWrapper = document.createElement("div");
-		scheduleWrapper.className = 'content-wrapper';
-		wrapper.appendChild(scheduleWrapper);
 
 		const scheduleListHeader = document.createElement("h1");
 		scheduleListHeader.textContent = "Schedule";
-		scheduleWrapper.appendChild(scheduleListHeader);
+		this.scheduleSection.appendChild(scheduleListHeader);
+
+
+		const scheduleList = document.createElement("div");
+		scheduleList.className = 'schedule-list';
+		this.scheduleSection.appendChild(scheduleList);
+		
 
 		const schedules = [
 			{
@@ -91,25 +79,23 @@ export class Home extends Restaurant {
 		schedules.forEach(schedule => {
 			const dayElement = document.createElement("div");
 			dayElement.textContent = schedule.day;
-			scheduleWrapper.appendChild(dayElement);
+			scheduleList.appendChild(dayElement);
 
 			const timeElement = document.createElement("div");
 			timeElement.textContent = schedule.time;
-			scheduleWrapper.appendChild(timeElement);
+			scheduleList.appendChild(timeElement);
 		});
 	}
 
 	displayAddress() {
-		const wrapper = this.wrapper;
-		const addressElement = document.createElement("div");
-		wrapper.appendChild(addressElement);
+		this.container.appendChild(this.addressSection);
 
 		const addressHeader = document.createElement("h1");
 		addressHeader.textContent = "Address";
-		addressElement.appendChild(addressHeader);
+		this.addressSection.appendChild(addressHeader);
 
 		const addressText = document.createElement("p");
 		addressText.textContent = "48, Sunstone Ave, Illumia, Luminae";
-		addressElement.appendChild(addressText);
+		this.addressSection.appendChild(addressText);
 	}
 }
