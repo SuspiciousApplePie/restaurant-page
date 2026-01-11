@@ -31,8 +31,12 @@ export class Home extends Restaurant {
 			}
 		];
 
+		this.reviewSection.className = "reviews";
+
 		reviews.forEach(index => {
 			this.container.appendChild(this.reviewSection);
+			const wrapper = document.createElement("div");
+			wrapper.className = "review";
 
 			const nameElement = document.createElement("h1");
 			nameElement.textContent = index.name;
@@ -43,9 +47,11 @@ export class Home extends Restaurant {
 			const ratingElement = document.createElement("p");
 			ratingElement.textContent = `${index.rating}/10`;
 
-			this.reviewSection.appendChild(nameElement);
-			this.reviewSection.appendChild(reviewElement);
-			this.reviewSection.appendChild(ratingElement);
+			wrapper.appendChild(nameElement);
+			wrapper.appendChild(reviewElement);
+			wrapper.appendChild(ratingElement);
+
+			this.reviewSection.appendChild(wrapper);
 
 		});
 	}

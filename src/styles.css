@@ -11,3 +11,21 @@
 	justify-content: center;
 	padding: 1rem;
 }
+
+.reviews {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.reviews .review {
+	display: grid;
+	grid-template-row: 1fr, 2fr, 1fr;
+}
+
+.review h1 {
+	font-size: 1.5rem;
+}
+
+.review p:last-of-type {
+	text-align: right;
+}
