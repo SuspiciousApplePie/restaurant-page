@@ -59,30 +59,27 @@ export class Home extends Restaurant {
 	addScheduleList() {
 
 		this.container.appendChild(this.scheduleSection);
-		
+		this.scheduleSection.className = "schedule-list";
 
 		const scheduleListHeader = document.createElement("h1");
 		scheduleListHeader.textContent = "Schedule";
 		this.scheduleSection.appendChild(scheduleListHeader);
 
-
-		const scheduleList = document.createElement("div");
-		scheduleList.className = 'schedule-list';
-		this.scheduleSection.appendChild(scheduleList);
-		
-
 		const schedules = [
 			{
-				day: "Monday-Friday",
-				time: "9am-6pm",
+				day: "Monday - Friday",
+				time: "9am - 6pm",
 			},
 			{
 				day: "Saturday",
-				time: "9am-9pm",
+				time: "9am - 9pm",
 			},
 		];
 
 		schedules.forEach(schedule => {
+			const scheduleList = document.createElement("div");
+			scheduleList.className = 'schedule';
+
 			const dayElement = document.createElement("div");
 			dayElement.textContent = schedule.day;
 			scheduleList.appendChild(dayElement);
@@ -90,6 +87,8 @@ export class Home extends Restaurant {
 			const timeElement = document.createElement("div");
 			timeElement.textContent = schedule.time;
 			scheduleList.appendChild(timeElement);
+
+			this.scheduleSection.appendChild(scheduleList);
 		});
 	}
 

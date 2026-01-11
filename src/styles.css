@@ -19,7 +19,7 @@
 
 .reviews .review {
 	display: grid;
-	grid-template-row: 1fr, 2fr, 1fr;
+	grid-template-row: 1fr 2fr 1fr;
 }
 
 .review h1 {
@@ -28,4 +28,18 @@
 
 .review p:last-of-type {
 	text-align: right;
+}
+
+.schedule-list {
+	display: grid;
+	grid-template: repeat(2, 1fr) / 1fr 2fr;
+}
+
+.schedule-list h1 {
+	grid-area: 1 / 1 / -1 / 1;
+}
+
+.schedule-list .schedule {
+	display: grid;
+	grid-template-columns: 120px 1fr;
 }
