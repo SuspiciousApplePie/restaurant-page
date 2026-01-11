@@ -43,3 +43,12 @@
 	display: grid;
 	grid-template-columns: 120px 1fr;
 }
+
+.address {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.address p {
+	align-self: center;
+}

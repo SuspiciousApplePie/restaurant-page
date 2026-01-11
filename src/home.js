@@ -94,6 +94,7 @@ export class Home extends Restaurant {
 
 	displayAddress() {
 		this.container.appendChild(this.addressSection);
+		this.addressSection.className = "address";
 
 		const addressHeader = document.createElement("h1");
 		addressHeader.textContent = "Address";
