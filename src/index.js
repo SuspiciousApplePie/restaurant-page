@@ -1,3 +1,4 @@
+import "./styles.css";
 import { Restaurant } from "./restaurant.js";
 import { Home } from "./home.js";
 import { Menu } from "./menu.js";

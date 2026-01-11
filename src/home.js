@@ -10,8 +10,8 @@ export class Home extends Restaurant {
 	}
 
 	addTitle() {
+		this.titleSection.className = "title";
 		const title = document.createElement('h1');
-		title.className = "title";
 		title.textContent = "Bladie's Pizzeria";
 		this.titleSection.appendChild(title);
 		this.container.appendChild(this.titleSection);
