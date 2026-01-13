@@ -6,6 +6,15 @@
 	margin: 0;
 }
 
+body {
+}
+
+#content {
+	height: 800px;
+	display: grid;
+	grid-template-rows: 120px repeat(2, 1fr) 80px;
+}
+
 .title {
 	display: grid;
 	justify-content: center;
@@ -15,19 +24,34 @@
 .reviews {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	column-gap: 8px;
+	margin-inline-end: 20px;
+	margin-inline-start: 20px;
 }
 
 .reviews .review {
 	display: grid;
 	grid-template-row: 1fr 2fr 1fr;
+	padding-inline-start: 20px;
+	padding-inline-end: 20px;
 }
 
 .review h1 {
+	font-size: 1.8rem;
+	display: grid;
+	align-content: center;
+}
+
+.review p {
 	font-size: 1.5rem;
 }
 
 .review p:last-of-type {
-	text-align: right;
+	justify-self: end;
+	display: grid;
+	align-items: center;
+	position: relative;
+	right: 15px;
 }
 
 .schedule-list {
