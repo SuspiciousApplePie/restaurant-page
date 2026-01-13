@@ -79,9 +79,19 @@ body {
 
 .address {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: repeat(2, 1fr);
+	margin-inline-end: 20px;
+	margin-inline-start: 20px;
+}
+
+.address h1 {
+	display: grid;
+	align-content: center;
+	justify-content: center;
 }
 
 .address p {
-	align-self: center;
+	display: grid;
+	align-content: center;
+	padding: 20px;
 }
