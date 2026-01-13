@@ -9,7 +9,7 @@
 body {
 }
 
-#content {
+#home-content {
 	height: 800px;
 	display: grid;
 	grid-template-rows: 120px 1fr 150px 80px;

@@ -22,7 +22,7 @@ export class Menu extends Restaurant {
 		});
 	}
 
-	addFood() {
+	displayFood() {
 		const menu = [
 			{
 				foodName: "Food 1",
@@ -80,5 +80,18 @@ export class Menu extends Restaurant {
 					break;
 			}
 		});
+	}
+
+	displayPage() {
+		this.container.id = "menu-content";
+		this.displaySection();
+		this.displayFood();
+	}
+
+	clearPage() {
+		super.clearPage();
+		this.beverageSection.innerHTML = "";
+		this.mainSection.innerHTML = "";
+		this.sideSection.innerHTML = "";
 	}
 }

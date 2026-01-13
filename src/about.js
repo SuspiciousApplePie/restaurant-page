@@ -8,10 +8,6 @@ export class About extends Restaurant {
 		this.contactSection = document.createElement("div");
 	}
 
-	test() {
-		console.log(this.container);
-	}
-
 	displaySection() {
 		this.container.appendChild(this.aboutSection);
 		this.container.appendChild(this.memberSection);
@@ -72,5 +68,20 @@ export class About extends Restaurant {
 		const contactNumber = document.createElement("div");
 		contactNumber.textContent = contact.number;
 		this.contactSection.appendChild(contactNumber);
+	}
+
+	displayPage() {
+		this.container.id = "about-content";
+		this.displaySection();
+		this.displayAboutUs();
+		this.displayMember();
+		this.displayContact();
+	}
+
+	clearPage() {
+		super.clearPage();
+		this.aboutSection.innerHTML = "";
+		this.memberSection.innerHTML = "";
+		this.contactSection.innerHTML = "";
 	}
 }

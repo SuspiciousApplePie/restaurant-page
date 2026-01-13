@@ -104,4 +104,21 @@ export class Home extends Restaurant {
 		addressText.textContent = "48, Sunstone Ave, Illumia, Luminae";
 		this.addressSection.appendChild(addressText);
 	}
+
+	displayPage() {
+		this.container.id = "home-content";
+		this.clearPage();
+		this.addTitle();
+		this.addReview();
+		this.addScheduleList();
+		this.displayAddress();
+	}
+
+	clearPage() {
+		super.clearPage();
+		this.titleSection.innerHTML = "";
+		this.reviewSection.innerHTML = "";
+		this.scheduleSection.innerHTML = "";
+		this.addressSection.innerHTML = "";
+	}
 }
