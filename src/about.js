@@ -15,8 +15,8 @@ export class About extends Restaurant {
 	}
 
 	displayAboutUs() {
+		this.aboutSection.className = "about";
 		const aboutUsInfo = "The Bladie's Pizzeria have been standing for the last 2 eons. Authentic and made with enlightenment."
-
 		const aboutElement = document.createElement("p");
 		aboutElement.textContent = aboutUsInfo;
 		this.aboutSection.appendChild(aboutElement);
@@ -24,6 +24,12 @@ export class About extends Restaurant {
 	}
 
 	displayMember() {
+		this.memberSection.className = "member";
+
+		const header = document.createElement("h1");
+		header.textContent = "Members"
+		this.memberSection.appendChild(header);
+
 		const members = [
 			{
 				name: "Blady",
@@ -41,6 +47,7 @@ export class About extends Restaurant {
 
 		members.forEach(member => {
 			const memberWrapper = document.createElement("div");
+			memberWrapper.className = "member-info"
 			
 			const name = document.createElement("p");
 			name.textContent = member.name;
@@ -56,6 +63,9 @@ export class About extends Restaurant {
 	}
 
 	displayContact() {
+
+		this.contactSection.className = "contact";
+
 		const contact = {
 			email: "thebladies@luminae.il",
 			number: "LUMEN87209114455",
