@@ -60,11 +60,16 @@ export class Menu extends Restaurant {
 			const food = document.createElement("section");
 			food.className = "food-item";
 
+			const imageElement = document.createElement("img");
+			imageElement.height = 250;
+			imageElement.width = 250;
+			imageElement.src = "#";
 			const itemElement = document.createElement("div");
 			itemElement.textContent = item.foodName;
 			const priceElement = document.createElement("div");
 			priceElement.textContent = item.price;
 
+			food.appendChild(imageElement);
 			food.appendChild(itemElement);
 			food.appendChild(priceElement);
 
