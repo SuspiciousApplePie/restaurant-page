@@ -151,12 +151,17 @@ body {
 	align-content: center;
 	justify-content: center;
 	font-size: 1.5rem;
+	background: #f1f2f3;
+	border: 5px #af9164 solid;
+	margin: 1rem;
 }
 
 #about-content .member {
 	display: grid;
 	grid-template-rows: 50px 1fr;
 	grid-template-columns: repeat(3, 1fr);
+	margin: 1rem;
+	column-gap: 10px;
 }
 
 .member h1 {
@@ -170,6 +175,8 @@ body {
 	display: grid;
 	align-content: center;
 	justify-content: center;
+	background: #f1f2f3;
+	border: 5px #af9164 solid;
 }
 
 #about-content .contact {
