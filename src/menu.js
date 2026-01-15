@@ -80,7 +80,7 @@ export class Menu extends Restaurant {
 			const itemElement = document.createElement("div");
 			itemElement.textContent = item.foodName;
 			const priceElement = document.createElement("div");
-			priceElement.textContent = item.price;
+			priceElement.textContent = `${item.price} LS`;
 
 			food.appendChild(imageElement);
 			food.appendChild(itemElement);
