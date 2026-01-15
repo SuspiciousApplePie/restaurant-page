@@ -1,5 +1,12 @@
 import { Restaurant } from "./restaurant.js";
 
+import lemonImage from "./img/lemon.jpeg";
+import kiwiImage from "./img/kiwi.jpeg";
+import pizzaImg from "./img/pizza.jpeg";
+import ramenImg from "./img/ramen.jpeg";
+import greenSaladImg from "./img/green_salad.jpeg";
+import gyozaImg from "./img/gyoza.jpeg";
+
 export class Menu extends Restaurant {
 	constructor() {
 		super();
@@ -25,34 +32,40 @@ export class Menu extends Restaurant {
 	displayFood() {
 		const menu = [
 			{
-				foodName: "Food 1",
+				foodName: "Pizza",
 				price: 30,
 				type: "main",
+				img: pizzaImg,
 			},
 			{
-				foodName: "Food 2",
+				foodName: "Ramen Noodles",
 				price: 25,
 				type: "main",
+				img: ramenImg,
 			},
 			{
-				foodName: "Drink 1",
+				foodName: "Lemoon Juice",
 				price: 8,
 				type: "beverages",
+				img: lemonImage,
 			},
 			{
-				foodName: "Drink 2",
+				foodName: "Kiwi",
 				price: 11,
 				type: "beverages",
+				img: kiwiImage,
 			},
 			{
-				foodName: "Side 1",
+				foodName: "Green Salad",
 				price: 15,
 				type: "side",
+				img: greenSaladImg,
 			},
 			{
 				foodName: "Side 2",
 				price: 18,
 				type: "side",
+				img: gyozaImg,
 			}
 		];
 
@@ -63,7 +76,7 @@ export class Menu extends Restaurant {
 			const imageElement = document.createElement("img");
 			imageElement.height = 250;
 			imageElement.width = 250;
-			imageElement.src = "#";
+			imageElement.src = item.img;
 			const itemElement = document.createElement("div");
 			itemElement.textContent = item.foodName;
 			const priceElement = document.createElement("div");
