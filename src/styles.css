@@ -8,6 +8,11 @@
 
 body {
 	background: #fa003f;
+	color: #f1f2f3;
+}
+
+p {
+	color: #333;
 }
 
 
@@ -111,6 +116,10 @@ button:hover,
 	padding: 20px;
 	background: #f1f2f3;
 	border: 5px #af9164 solid;
+}
+
+.schedule {
+	color: #333;
 }
 
 .address {
