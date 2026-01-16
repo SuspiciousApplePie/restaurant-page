@@ -6,6 +6,7 @@ export class About extends Restaurant {
 		this.aboutSection = document.createElement("div");
 		this.memberSection = document.createElement("div");
 		this.contactSection = document.createElement("div");
+		this.button = document.querySelector("#about");
 	}
 
 	displaySection() {
@@ -82,6 +83,7 @@ export class About extends Restaurant {
 
 	displayPage() {
 		this.container.id = "about-content";
+		this.button.className = "selected";
 		this.displaySection();
 		this.displayAboutUs();
 		this.displayMember();
@@ -90,6 +92,7 @@ export class About extends Restaurant {
 
 	clearPage() {
 		super.clearPage();
+		this.button.className = "";
 		this.aboutSection.innerHTML = "";
 		this.memberSection.innerHTML = "";
 		this.contactSection.innerHTML = "";

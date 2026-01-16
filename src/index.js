@@ -10,19 +10,22 @@ import { About } from "./about.js";
 	const body = document.querySelector("body");
 
 	body.addEventListener("click", (e) => {
-		switch (e.target.id) {
-			case "home":
-				home.clearPage();
-				home.displayPage();
-				break;
-			case "menu":
-				menu.clearPage();
-				menu.displayPage();
-				break;
-			case "about":
-				about.clearPage();
-				about.displayPage();
-				break;
-		};	
+		
+		if (e.target.tagName.toLowerCase() === "button") {
+			home.clearPage();
+			menu.clearPage();
+			about.clearPage();
+			switch (e.target.id) {
+				case "home":
+					home.displayPage();
+					break;
+				case "menu":
+					menu.displayPage();
+					break;
+				case "about":
+					about.displayPage();
+					break;
+			}
+		}	
 	});
 })();

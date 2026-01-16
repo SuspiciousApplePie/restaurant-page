@@ -10,6 +10,34 @@ body {
 	background: #fa003f;
 }
 
+
+header {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+header nav {
+	display: grid;
+	padding: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	width: 800px;
+}
+
+nav button {
+	height: 50px;
+	font-size: 1.5rem;
+	border: 1px #af9164 solid;
+}
+
+button:hover,
+.selected {
+	background: #fa003f;
+	border: 1px #f1f2f3 solid;
+	color: #f1f2f3;
+}
+
+
 #home-content {
 	height: 800px;
 	display: grid;
@@ -21,6 +49,7 @@ body {
 .title {
 	display: grid;
 	justify-content: center;
+	align-content: center;
 	padding: 1rem;
 }
 

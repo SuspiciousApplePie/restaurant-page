@@ -13,6 +13,7 @@ export class Menu extends Restaurant {
 		this.beverageSection = document.createElement("div");
 		this.mainSection = document.createElement("div");
 		this.sideSection = document.createElement("div");
+		this.button = document.querySelector("#menu");
 	}
 
 	displaySection() {
@@ -102,12 +103,14 @@ export class Menu extends Restaurant {
 
 	displayPage() {
 		this.container.id = "menu-content";
+		this.button.className = "selected";
 		this.displaySection();
 		this.displayFood();
 	}
 
 	clearPage() {
 		super.clearPage();
+		this.button.className = null;
 		this.beverageSection.innerHTML = "";
 		this.mainSection.innerHTML = "";
 		this.sideSection.innerHTML = "";

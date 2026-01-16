@@ -7,6 +7,7 @@ export class Home extends Restaurant {
 		this.reviewSection = document.createElement("div");
 		this.scheduleSection = document.createElement("div");
 		this.addressSection = document.createElement("div");
+		this.button = document.querySelector("#home");
 	}
 
 	addTitle() {
@@ -107,7 +108,7 @@ export class Home extends Restaurant {
 
 	displayPage() {
 		this.container.id = "home-content";
-		this.clearPage();
+		this.button.className = "selected";
 		this.addTitle();
 		this.addReview();
 		this.addScheduleList();
@@ -116,6 +117,7 @@ export class Home extends Restaurant {
 
 	clearPage() {
 		super.clearPage();
+		this.button.className = null;
 		this.titleSection.innerHTML = "";
 		this.reviewSection.innerHTML = "";
 		this.scheduleSection.innerHTML = "";
