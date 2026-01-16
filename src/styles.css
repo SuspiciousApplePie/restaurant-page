@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'good_timingbold';
+    src: url('../fonts/good_timing_bd-webfont.woff2') format('woff2'),
+         url('../fonts/good_timing_bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: 'good_timingbold';
 }
 
 body {
@@ -47,7 +56,7 @@ button:hover,
 	height: 800px;
 	display: grid;
 	grid-template-rows: 120px 1fr 150px 80px;
-	row-gap: 20px;
+	row-gap: 2rem;
 	padding: 2rem;
 }
 
@@ -79,6 +88,7 @@ button:hover,
 	font-size: 1.8rem;
 	display: grid;
 	align-content: center;
+	color: #333;
 }
 
 .review p {
@@ -110,7 +120,7 @@ button:hover,
 
 .schedule-list .schedule {
 	display: grid;
-	grid-template-columns: 180px 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	align-content: center;
 	font-size: 1.5rem;
 	padding: 20px;
@@ -215,6 +225,7 @@ button:hover,
 	justify-content: center;
 	background: #f1f2f3;
 	border: 5px #af9164 solid;
+	font-size: 1.5rem;
 }
 
 #about-content .contact {
