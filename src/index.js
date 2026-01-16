@@ -9,6 +9,8 @@ import { About } from "./about.js";
 	const about = new About();
 	const body = document.querySelector("body");
 
+	home.displayPage();
+
 	body.addEventListener("click", (e) => {
 		
 		if (e.target.tagName.toLowerCase() === "button") {
