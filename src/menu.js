@@ -63,7 +63,7 @@ export class Menu extends Restaurant {
 				img: greenSaladImg,
 			},
 			{
-				foodName: "Side 2",
+				foodName: "Gyoza",
 				price: 18,
 				type: "side",
 				img: gyozaImg,
